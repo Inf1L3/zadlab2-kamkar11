@@ -46,13 +46,11 @@ public class MojeZadania {
     public void zadanie2() {
 
         int a = 1;
-        
 
-        while (a==1) 
-        {
+        while (a == 1) {
             double liczba1;
             double liczba2;
-            
+
             System.out.println("Podaj co liczyć: (od 1 do 7)(0 aby wyjść)");
             System.out.println("================================");
             System.out.println("1 - suma: ");
@@ -64,83 +62,73 @@ public class MojeZadania {
             System.out.println("7 - funkcje trygonometryczne");
             System.out.println("================================");
             int n = input.nextInt();
-            
-            switch (n) 
-            {
-                case 1:
-                {
+
+            switch (n) {
+                case 1: {
                     System.out.println("Podaj pierwszą liczbe: ");
                     liczba1 = input.nextDouble();
                     System.out.println("Podaj drugą liczbe: ");
                     liczba2 = input.nextDouble();
-                    System.out.println("Suma: "+(liczba1+liczba2));
+                    System.out.println("Suma: " + (liczba1 + liczba2));
                     break;
                 }
-                case 2:
-                {
+                case 2: {
                     System.out.println("Podaj pierwszą liczbe: ");
                     liczba1 = input.nextDouble();
                     System.out.println("Podaj drugą liczbe: ");
                     liczba2 = input.nextDouble();
-                    System.out.println("Różnica: "+(liczba1-liczba2));
+                    System.out.println("Różnica: " + (liczba1 - liczba2));
                     break;
                 }
-                case 3:
-                {
+                case 3: {
                     System.out.println("Podaj pierwszą liczbe: ");
                     liczba1 = input.nextDouble();
                     System.out.println("Podaj drugą liczbe: ");
                     liczba2 = input.nextDouble();
-                    System.out.println("Iloczyn: "+(liczba1*liczba2));
+                    System.out.println("Iloczyn: " + (liczba1 * liczba2));
                     break;
                 }
-                case 4:
-                {
+                case 4: {
                     System.out.println("Podaj pierwszą liczbe: ");
                     liczba1 = input.nextDouble();
                     System.out.println("Podaj drugą liczbe: ");
                     liczba2 = input.nextDouble();
-                    System.out.println("Iloraz: "+(liczba1/liczba2));
+                    System.out.println("Iloraz: " + (liczba1 / liczba2));
                     break;
                 }
-                case 5:
-                {
+                case 5: {
                     double podstawa;
                     double wykladnik;
                     System.out.println("Podaj liczbe którą chcesz potęgować: ");
                     podstawa = input.nextDouble();
                     System.out.println("Do której potęgi: ");
                     wykladnik = input.nextDouble();
-                    System.out.println("Potęga: "+Math.pow(podstawa, wykladnik));
+                    System.out.println("Potęga: " + Math.pow(podstawa, wykladnik));
                     break;
-                    
+
                 }
-                case 6:
-                {
+                case 6: {
                     double pierwiastek;
                     System.out.println("Podaj liczbe nieujemną: ");
                     pierwiastek = input.nextDouble();
-                    System.out.println("Pierwiastek: "+Math.sqrt(pierwiastek));
+                    System.out.println("Pierwiastek: " + Math.sqrt(pierwiastek));
                     break;
                 }
-                case 7:
-                {
+                case 7: {
                     double x;
                     System.out.println("Podaj wartość: ");
                     x = input.nextDouble();
-                    System.out.println("sin: "+Math.sin(x));
-                    System.out.println("cos: "+Math.cos(x));
-                    System.out.println("tg: "+Math.tan(x));
-                    System.out.println("ctg: "+(Math.cos(x))/(Math.sin(x)));
+                    System.out.println("sin: " + Math.sin(x));
+                    System.out.println("cos: " + Math.cos(x));
+                    System.out.println("tg: " + Math.tan(x));
+                    System.out.println("ctg: " + (Math.cos(x)) / (Math.sin(x)));
                     break;
                 }
-                case 0:
-                {
-                    a=0;
+                case 0: {
+                    a = 0;
                     break;
                 }
-                default:
-                {
+                default: {
                     System.out.println("Podaj inną cyfrę !!!");
                     break;
                 }
@@ -151,8 +139,58 @@ public class MojeZadania {
     }
 
     public void zadanie3() {
-        
+        double[] tab = new double[10];
+        int c = 0;
 
+        do {
+            System.out.println("Podaj co robić: ");
+            System.out.println("==========================");
+            System.out.println("1 - od pierwszego elementu");
+            System.out.println("2 - od ostatniego elementu");
+            System.out.println("3 - nieparzyste indeksy");
+            System.out.println("4 - parzyste indeksy");
+            System.out.println("0 - wyjście");
+            System.out.println("===========================");
+            int n = input.nextInt();
+            
+            if (n == 1) {
+
+                double a = 0;
+                for (int i = 0; i < 10; i++) {
+                    a += 1;
+                    tab[i] = a;
+                    System.out.print("tab[" + i + "] = " + tab[i] + " ");
+                    System.out.println("");
+                }
+            }
+            if (n == 2) {
+                for (int i = 9; i >= 0; i--) {
+
+                    System.out.print("tab[" + i + "] = " + tab[i] + " ");
+                    System.out.println("");
+                }
+            }
+            if (n == 3) {
+                System.out.println("NIEPARZYSTE");
+                for (int i = 1; i < 10; i += 2) {
+
+                    System.out.print("tab[" + i + "] = " + tab[i] + " ");
+                    System.out.println("");
+                }
+            }
+            if (n == 4) {
+                System.out.println("PARZYSTE");
+                for (int i = 0; i < 10; i += 2) {
+
+                    System.out.print("tab[" + i + "] = " + tab[i] + " ");
+                    System.out.println("");
+                }
+            }
+            if (n == 0) {
+                c = 1;
+            }
+
+        } while (c == 0);
     }
 
     public void zadanie4() {
