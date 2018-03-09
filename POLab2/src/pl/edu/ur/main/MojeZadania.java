@@ -270,16 +270,68 @@ public class MojeZadania {
     }
 
     public void zadanie5() {
-        
+
+        for (int i = 20; i >= 0; i--) {
+            if (i == 19 || i == 15 || i == 9 || i == 6 || i == 2) {
+                continue;
+            }
+            System.out.println(i);
+
+        }
 
     }
 
     public void zadanie6() {
 
+        for (;;) {
+            System.out.println("Podaj liczbę całkowitą: ");
+            int n = input.nextInt();
+
+            if (n < 0) {
+                break;
+            }
+        }
+
     }
 
     public void zadanie7() {
 
+        System.out.println("Podaj ile liczb sortować: ");
+        int n = input.nextInt();
+
+        double[] tab = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Podaj " + (i+1) + "liczbę: ");
+            tab[i] = input.nextDouble();
+        }
+        System.out.println("Przed sortowaniem: ");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(tab[i]+" ");
+        }
+
+        double temp;
+        int zmiana = 1;
+        while (zmiana > 0) {
+            zmiana = 0;
+            for (int i = 0; i < tab.length - 1; i++) {
+                if (tab[i] > tab[i + 1]) {
+                    temp = tab[i + 1];
+                    tab[i + 1] = tab[i];
+                    tab[i] = temp;
+                    zmiana++;
+                }
+            }
+        }
+        System.out.println(" ");
+        System.out.println("Po sortowaniu: ");
+        for (int i = 0; i < tab.length; i++) {
+            System.out.print(tab[i] + " ");
+        }
+        System.out.println(" ");
     }
 
 }
+
+
