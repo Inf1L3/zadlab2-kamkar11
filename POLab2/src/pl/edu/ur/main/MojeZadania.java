@@ -152,7 +152,7 @@ public class MojeZadania {
             System.out.println("0 - wyjście");
             System.out.println("===========================");
             int n = input.nextInt();
-            
+
             if (n == 1) {
 
                 double a = 0;
@@ -194,10 +194,83 @@ public class MojeZadania {
     }
 
     public void zadanie4() {
+        double[] tab = new double[10];
+
+        double m = 0;
+        for (int i = 0; i < 10; i++) {
+            m += 1;
+            tab[i] = m;
+
+        }
+        int a = 0;
+
+        while (a == 0) {
+
+            System.out.println("Podaj co robić: ");
+            System.out.println("==========================");
+            System.out.println("1 - suma elementów tablicy");
+            System.out.println("2 - iloczyn elementów tablicy");
+            System.out.println("3 - średnia wartość");
+            System.out.println("4 - minimalna wartość ");
+            System.out.println("5 - maksymalna wartość ");
+            System.out.println("0 - wyjście");
+            System.out.println("===========================");
+            int n = input.nextInt();
+
+            if (n == 1) {
+                double suma = 0;
+                for (int i = 0; i < 10; i++) {
+                    suma = suma + tab[i];
+                }
+                System.out.println("Suma el.tablicy: " + suma);
+
+            } else if (n == 2) {
+                double iloczyn = 1;
+                for (int i = 0; i < 10; i++) {
+                    iloczyn = iloczyn * tab[i];
+                }
+                System.out.println("Iloczyn el.tablicy: " + iloczyn);
+
+            } else if (n == 3) {
+                double suma = 0;
+                for (int i = 0; i < 10; i++) {
+                    suma = suma + tab[i];
+                }
+                System.out.println("Średnia wartość: " + (suma / 10));
+
+            } else if (n == 4) {
+                double min = tab[0];
+
+                for (int i = 0; i < 10; i++) {
+
+                    if (tab[i] < min) {
+                        min = tab[i];
+                    }
+                }
+                System.out.println(min);
+
+            } else if (n == 5) {
+                double max = tab[0];
+
+                for (int i = 0; i < 10; i++) {
+
+                    if (tab[i] > max) {
+                        max = tab[i];
+                    }
+                }
+                System.out.println(max);
+
+            } else if (n == 0) {
+                a = 1;
+            } else {
+                System.out.println("Zły wybór !!!");
+            }
+        }
 
     }
 
     public void zadanie5() {
+        
 
     }
 
